@@ -1,0 +1,60 @@
+
+
+#include <stdio.h>
+
+int main(void){
+	float liters, otherLiters, pricePerLiters, totalCost, discount , f1 , f2, sum;
+	char fuelType;
+	discount = 0;
+	while (1){
+		printf("Εισάγετε είδος καυσίμου (B για βενζίνη, P για πετρέλαιο): ");
+		scanf(" %c", &fuelType);
+		if (fuelType == 'B' || fuelType == 'b'){
+			break;
+			}
+		else if (fuelType == 'P' || fuelType == 'p'){
+			break;
+			}
+	}
+	printf("Εισάγετε λίτρα που αγοράζετε: ");
+	scanf("%f", &liters);
+	printf("Εισάγετε λίτρα που αγοράσατε από άλλο καύσιμο (0 αν δεν υπάρχει): ");
+	scanf("%f", &otherLiters);
+	if (fuelType == 'B' || fuelType == 'b'){
+		pricePerLiters = 2.05;
+		if (liters > 30){
+			discount = discount + 0.05;
+		}
+	}
+	else {
+		pricePerLiters = 1.75;
+		if (liters > 40){
+			discount = discount + 0.07;
+		}
+	}
+	sum = liters + otherLiters;
+	if (sum > 80){
+		discount = 0.03;
+	}
+	totalCost = liters * pricePerLiters * (1 - discount);
+	printf("Teliko poso: %.2f\n",totalCost);
+	
+	return 0;
+  
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+

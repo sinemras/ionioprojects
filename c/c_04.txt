@@ -1,0 +1,39 @@
+
+
+#include <stdio.h>
+
+int main(void){
+	double u,a,v_next,s,temp,v;
+	int tt,t,j;
+	do{
+		printf("δώσε αρχική ταχύτητα (σε m/s): ");
+		scanf("%lf",&u);
+		printf("δώσε επιτάχυνση (σε m/s^2): ");
+		scanf("%lf",&a);
+		printf("δώσε χρόνο κίνησης (σε δευτερόλεπτα): ");
+		scanf("%d",&tt);
+	}while (u<0 || tt<0);
+	for (t=1 ; t<= tt ; t++){
+		v = u+(a*t) ; 
+		s = (u*t)+(0.5*a*(t*t));
+		printf("στιγμιαία ταχύτητα: %lf " ,v);
+		printf("	διανυθείσα απόσταση: %lf ",s); 
+		printf("	δευτερόλεπτο: %d \n",t);
+		if (v>100){
+			printf("το σώμα κινείται πολύ γρήγορα!!!!!!!!!  ");
+		}
+		if ((a< 0 && v<=0)) {
+			break;
+		}
+		temp = (int)(v/10.0);
+		if (v/10.0==temp) {
+			printf(" πρόβλεψη τιμών: \n");
+			for (j=t+1 ; j<t+4 ; j++){
+				v_next = u + a*j;
+				printf("η ταχύτητα θα είναι %lf \n", v_next);
+			}
+		}		 	
+		
+	}
+return 0;
+}

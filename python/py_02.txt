@@ -1,0 +1,25 @@
+
+a = int(input("δώσε ακέραιο: "))
+b = int(input("δωσε 2ο ακεραιο: "))
+if (a>0) and (b>0):
+	athrisma = a+b
+	if (athrisma)>100 : 
+		print("μεγάλο αθροισμα :",athrisma )
+	if ((athrisma % 2	)== 0):
+		print("το άθροισμα",athrisma,"είναι ζυγό")
+	else :
+		print("το άθροισμα",athrisma,"είναι μονό")	
+elif ((a<0) or (b<0)):
+	if ((a<0) and (b<0)):
+		print(a - b)
+	else:
+		print(a *b) 
+
+if ((a==0) and (b==0)):
+	print("και οι δύο είναι 0")
+elif a==0 :
+	if b>0 :
+		print("Ένας είναι μηδέν και ο άλλος θετικός.")	
+elif b==0:
+	if a>0:
+		print("Ένας είναι μηδέν και ο άλλος θετικός.")

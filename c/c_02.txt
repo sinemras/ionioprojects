@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main() {
+    int a,b ;
+    scanf("%i %i", &a, &b);
+    if ((a>0) && b>0){
+            int athrisma=a+b;
+            if (athrisma>100){
+                    printf("megalo athrisma: %i \n" ,athrisma);
+            }
+            if (athrisma%2 == 0) {
+                    printf("to athrisma %i einai zigo", athrisma);    
+            }else{
+                printf("to athrisma %i einai mono", athrisma);
+            }
+    }else {
+            printf("oi arithmoi den einai kai oi 2 thetikoi");
+    } 
+     return 0;
+}

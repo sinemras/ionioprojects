@@ -1,0 +1,13 @@
+
+num1 = int( input())
+num2 = int( input())
+sum_ = num1 + num2
+diff = num1 - num2
+mult = num1 * num2
+if num2 == 0:
+	div_ = "δεν υπάρχει"
+else:
+	div_ = num1/num2
+
+print(" άθροισμα: ",sum_,"\n διαφορά: ",diff,"\n γινομενο: ",mult,"\n πυλίκο: ",div_)
+

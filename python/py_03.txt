@@ -1,0 +1,28 @@
+
+total = 0
+s = 0
+while True:
+    product = input("Εισάγετε προϊόν: ").lower()
+    # Έξοδος από το loop
+    if product == "τέλος":
+        break
+    # Έλεγχος εγκυρότητας προϊόντος
+    if product not in ["καφές", "χυμός", "σνακ"]:
+        print("Μη έγκυρο προϊόν. Δοκιμάστε ξανά.")
+        continue
+    posotita = int(input("Ποσότητα: "))
+    if product == "καφές":
+        p = 2
+        s = s + posotita
+    elif product == "χυμός":
+        p = 2.5
+    else:
+        p = 3
+    ttotal = posotita * p
+    if s > 3:
+        ttotal = ttotal - (s - 3) * 0.5
+    total = total + ttotal
+    print("Μικρό σύνολο για", posotita, product, ttotal)
+if total > 20:
+    total = total * 0.9
+print("Το τελικό σύνολο:", total)
