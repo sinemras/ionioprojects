@@ -1,4 +1,3 @@
-
 total = 0
 s = 0
 while True:
